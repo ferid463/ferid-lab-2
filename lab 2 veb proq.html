@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fərid Cəbrayılov - CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #e3f2fd, #fce4ec);
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      max-width: 960px;
+      margin: 30px auto;
+      background: #fff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .sidebar {
+      width: 35%;
+      background: linear-gradient(to bottom right, #3f51b5, #5c6bc0);
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .sidebar img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #fff;
+    }
+
+    .sidebar h1 {
+      font-size: 20px;
+      margin: 15px 0 5px;
+      color: #ffffff;
+    }
+
+    .sidebar p {
+      font-size: 13px;
+      margin: 4px 0;
+      color: #e0e0e0;
+    }
+
+    .sidebar .info {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .info h3 {
+      font-size: 14px;
+      color: #ffffff;
+      margin-bottom: 8px;
+      border-bottom: 1px solid #7986cb;
+      padding-bottom: 3px;
+      cursor: pointer;
+    }
+
+    .info ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: none;
+    }
+
+    .info ul.active {
+      display: block;
+    }
+
+    .info li {
+      font-size: 13px;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+    }
+
+    .info li::before {
+      content: "\2022";
+      color: #ffeb3b;
+      margin-right: 6px;
+    }
+
+    .main {
+      width: 65%;
+      padding: 30px 25px;
+      background: #fafafa;
+    }
+
+    .section {
+      margin-bottom: 25px;
+      padding: 15px;
+      border-left: 4px solid #7e57c2;
+      background-color: #ffffff;
+      border-radius: 6px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .section h2 {
+      font-size: 16px;
+      color: #7e57c2;
+      margin-bottom: 10px;
+    }
+
+    .section p, .section ul {
+      font-size: 13px;
+      margin: 6px 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .section ul li {
+      margin-bottom: 6px;
+    }
+
+    .highlight {
+      font-weight: 500;
+    }
+
+    a {
+      color: #ffeb3b;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    button {
+      font-size: 11px;
+      margin-left: 10px;
+      background-color: #7e57c2;
+      color: white;
+      border: none;
+      padding: 3px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #5e35b1;
+    }
+
+    @media print {
+      body, html {
+        width: 210mm;
+        height: 297mm;
+      }
+
+      .container {
+        box-shadow: none;
+        flex-direction: column;
+      }
+
+      .sidebar, .main {
+        width: 100%;
+        border: none;
+      }
+
+      button {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sol Panel -->
+    <div class="sidebar">
+      <img src="https://i.postimg.cc/xj4YVyMh/Whats-App-Image-2025-04-10-at-20-25-48.jpg" alt="Fərid Cəbrayılov" />
+      <h1>Fərid Cəbrayılov</h1>
+      <p>17 yaş | Bakı, Maştağa qəsəbəsi</p>
+
+      <div class="info">
+        <h3 onclick="toggleSection(this)">📞 Əlaqə</h3>
+        <ul class="active">
+          <li>+994 50 484 24 11</li>
+          <li><a href="mailto:fridcbrayilov5@gmail.com">fridcbrayilov5@gmail.com</a></li>
+        </ul>
+
+        <h3 onclick="toggleSection(this)">🎓 Təhsil</h3>
+        <ul id="educationList" class="active">
+          <li>Azərbaycan Texniki Universiteti – 1-ci kurs</li>
+        </ul>
+        <button onclick="yeniElementElaveEt('educationList', 'ul')">+ Əlavə et</button>
+
+        <h3 onclick="toggleSection(this)">🌐 Dillər</h3>
+        <ul class="active">
+          <li>Azərbaycanca</li>
+          <li>İngiliscə</li>
+          <li>Türkcə</li>
+          <li>Rusca</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Sağ Panel -->
+    <div class="main">
+      <div class="section">
+        <h2>👤 Haqqımda</h2>
+        <p>Mən Fərid Cəbrayılov, gənc və enerjili biri olaraq özümü daima inkişaf etdirməyə çalışıram. Liderlik, komanda işi və yaradıcılıq sahəsində güclü bacarıqlara sahibəm. Texnologiyaya və sosial layihələrə marağım böyükdür.</p>
+      </div>
+
+      <div class="section">
+        <h2>🛠️ Bacarıqlar <button onclick="yeniElementElaveEt('skillsList', 'ul')">+ Əlavə et</button></h2>
+        <ul id="skillsList">
+          <li>Liderlik bacarığı</li>
+          <li>Çətin situasiyalardan çıxış</li>
+          <li>Sürətli və analitik düşünmə</li>
+          <li>Yüksək ünsiyyət bacarığı</li>
+          <li>Komanda idarəetməsi</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>💼 İş Təcrübəsi <button onclick="yeniElementElaveEt('experienceList', 'p')">+ Əlavə et</button></h2>
+        <div id="experienceList">
+          <p><strong>Könüllü - Gənclər Təşkilatı</strong><br>
+          📅 Mart 2023 – İyul 2023<br>
+          Tədbirlərin təşkili və komanda koordinasiyası.</p>
+
+          <p><strong>Layihə İştirakçısı - Startap İdeya Müsabiqəsi</strong><br>
+          📅 Noyabr 2023<br>
+          Komanda liderliyi və təqdimat hazırlığı.</p>
+
+          <p><strong>Təcrübəçi - IT üzrə Yay Düşərgəsi</strong><br>
+          📅 Avqust 2024<br>
+          Layihə icrası və texnologiya üzrə inkişaf.</p>
+
+          <p>3 illik ümumi iş təcrübəm – satış, rezervasiya və anbarda iş.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function yeniElementElaveEt(id, tip) {
+      let yeniMəlumat = prompt("Yeni məlumat daxil edin:");
+      if (!yeniMəlumat) return;
+
+      const bölmə = document.getElementById(id);
+
+      if (tip === "ul") {
+        const yeniLi = document.createElement("li");
+        yeniLi.textContent = yeniMəlumat;
+        bölmə.appendChild(yeniLi);
+      } else if (tip === "p") {
+        const yeniP = document.createElement("p");
+        yeniP.innerHTML = `<strong>Yeni Məlumat:</strong><br>📅 ${new Date().getFullYear()}<br>${yeniMəlumat}`;
+        bölmə.appendChild(yeniP);
+      }
+    }
+
+    function toggleSection(header) {
+      const list = header.nextElementSibling;
+      list.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
