@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fərid Cəbrayılov - CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f0f4f8;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    }
+
+    .left {
+      width: 35%;
+      background: linear-gradient(135deg, #4a90e2, #6fb1fc);
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .left img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .left h1 {
+      font-size: 22px;
+      margin: 10px 0 5px;
+    }
+
+    .left p {
+      font-size: 14px;
+      margin: 4px 0;
+    }
+
+    .section-title {
+      font-weight: 600;
+      margin-top: 20px;
+      font-size: 15px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+
+    .left ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: left;
+    }
+
+    .left ul li {
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+
+    .right {
+      width: 65%;
+      padding: 30px;
+    }
+
+    .section {
+      margin-bottom: 25px;
+    }
+
+    .section h2 {
+      font-size: 18px;
+      color: #4a90e2;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .section ul,
+    .section p {
+      font-size: 14px;
+      margin: 10px 0 0;
+      padding-left: 18px;
+    }
+
+    .section ul li {
+      margin-bottom: 5px;
+    }
+
+    button {
+      font-size: 12px;
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      padding: 3px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #357ab8;
+    }
+
+    @media print {
+      .container {
+        box-shadow: none;
+        margin: 0;
+        flex-direction: column;
+      }
+      button {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <img src="https://i.postimg.cc/xj4YVyMh/Whats-App-Image-2025-04-10-at-20-25-48.jpg" alt="Fərid Cəbrayılov şəkli">
+      <h1>Fərid Cəbrayılov</h1>
+      <p>17 yaş</p>
+      <p>Bakı şəhəri, Maştağa qəsəbəsi</p>
+
+      <div class="section-title">📞 Əlaqə</div>
+      <ul>
+        <li><strong>Telefon:</strong> +994 50 484 24 11</li>
+        <li><strong>Email:</strong> <a href="mailto:fridcbrayilov5@gmail.com" style="color:white;">fridcbrayilov5@gmail.com</a></li>
+      </ul>
+
+      <div class="section-title">🌐 Dillər</div>
+      <ul>
+        <li>Azərbaycanca</li>
+        <li>İngiliscə</li>
+        <li>Türkcə</li>
+        <li>Rusca</li>
+      </ul>
+
+      <div class="section-title">🎓 Təhsil</div>
+      <ul id="educationList">
+        <li>Azərbaycan Texniki Universiteti - 1-ci kurs</li>
+      </ul>
+      <button onclick="yeniElementElaveEt('educationList', 'ul')">+ Əlavə et</button>
+    </div>
+
+    <div class="right">
+      <div class="section">
+        <h2>🛠️ Bacarıqlar <button onclick="yeniElementElaveEt('skillsList', 'ul')">+ Əlavə et</button></h2>
+        <ul id="skillsList">
+          <li>Liderlik bacarığı</li>
+          <li>Çətin situasiyalardan çıxma bacarığı</li>
+          <li>Sürətli düşünmə</li>
+          <li>Ünsiyyət qurmaq bacarığı</li>
+          <li>Komanda idarəetmə bacarığı</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>💼 İş Təcrübəsi <button onclick="yeniElementElaveEt('experienceList', 'p')">+ Əlavə et</button></h2>
+        <div id="experienceList">
+          <p><strong>Könüllü - Gənclər Təşkilatı</strong><br>
+            📅 Mart 2023 – İyul 2023<br>
+            Tədbirlərin təşkili, iştirakçıların yönləndirilməsi və komanda daxilində koordinasiya işləri ilə məşğul olmuşam.</p>
+
+          <p><strong>Layihə İştirakçısı - Startap İdeya Müsabiqəsi</strong><br>
+            📅 Noyabr 2023<br>
+            Komanda şəklində ideya təqdim etmiş, təqdimat hazırlamış və liderlik etmişəm.</p>
+
+          <p><strong>Təcrübəçi - IT üzrə Yay Düşərgəsi</strong><br>
+            📅 Avqust 2024<br>
+            Yeni texnologiyalar öyrənmiş, layihələr hazırlamış və komanda işində iştirak etmişəm.</p>
+
+          <p>3 illik iş təcrübəm boyunca satıcı, rezervasion və ambardar kimi işləmişəm və müxtəlif bacarıqlara yiyələnmişəm.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function yeniElementElaveEt(id, tip) {
+      const yeniMəlumat = prompt("Yeni məlumat daxil edin:");
+      if (!yeniMəlumat) return;
+      const bölmə = document.getElementById(id);
+
+      if (tip === "ul") {
+        const yeniLi = document.createElement("li");
+        yeniLi.textContent = yeniMəlumat;
+        bölmə.appendChild(yeniLi);
+      } else if (tip === "p") {
+        const yeniP = document.createElement("p");
+        yeniP.innerHTML = `<strong>Yeni Məlumat:</strong><br>📅 ${new Date().getFullYear()}<br>${yeniMəlumat}`;
+        bölmə.appendChild(yeniP);
+      }
+    }
+  </script>
+</body>
+</html>
